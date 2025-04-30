@@ -1,6 +1,8 @@
 # TDX2025-Hackathon
 
 **Introduction:**
+
+
 This app integrates several technologies to provide a seamless, automated service experience for customers of home appliance manufacturers. It uses IoT for real-time issue detection, AI-powered bots and service agents for smooth customer interaction, and cloud-based services to retrieve relevant data (such as warranty information) and automate the creation of service cases and workorders. The integration of these technologies creates an efficient and responsive customer support experience.
 
 **Customer Interaction Flow**
@@ -39,18 +41,18 @@ This app integrates several technologies to provide a seamless, automated servic
 How Was This Achieved?
 
 
-**1- IoT Integration:**
+1. **IoT Integration:**
 The application uses IoT to detect appliance issues in real-time, alerting the customer automatically when something goes wrong.
-**2- Adaptive Messaging via Einstein Bot:**
+2. **Adaptive Messaging via Einstein Bot:**
 Due to the beta status of Adaptive Messaging, an Einstein bot is used to manage initial customer interactions and product selection.
 The bot helps guide the customer through the process, from identifying the product to gathering basic issue details.
-**3- RAG (Retrieval-Augmented Generation):**
+3. **RAG (Retrieval-Augmented Generation):**
 When the customer requests warranty information, Agentforce utilizes RAG to retrieve unstructured data from the Data Cloud, making it easier to provide precise, up-to-date information to the customer.
-**4 - Knowledge Base:**
+4. **Knowledge Base:**
 For troubleshooting steps, Agentforce taps into the Knowledge Base (powered by Einstein Data Library Knowledge) to ensure the customer gets accurate solutions based on the problem they report.
-**5 - Case & Workorder Creation:**
+5. **Case & Workorder Creation:**
 Once the issue is identified, and troubleshooting steps are provided, Agentforce Service Agent creates case records and workorders, seamlessly handling the backend process of customer support.
-**6 - Email Integration:**
+6. **Email Integration:**
 When a workorder is generated, the system automatically sends an email to the customer containing invoicing details, ensuring smooth communication.
 
 
