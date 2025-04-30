@@ -65,4 +65,4 @@ When a workorder is generated, the system automatically sends an email to the cu
     - Einstein Knowledge Base: To provide troubleshooting steps based on customer issues.
 
 
-![ Alt Text](https://orgfarm-9755b0244f.my.salesforce.com/sfc/p/#NS00000Ibo1v/a/NS00000037eT/8QqJCfRDY.b4UPfv3HVq9fC4sAdjLPd6hfb1rLIsBC8)
+![ Alt Text](https://github.com/prashant5971/TDX2025-Hackathon/blob/main/Agent%20Birbal%20flow%20Daigram.jpg)
