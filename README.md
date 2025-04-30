@@ -37,6 +37,8 @@ This app integrates several technologies to provide a seamless, automated servic
 
 
 How Was This Achieved?
+
+
 **1- IoT Integration:**
 The application uses IoT to detect appliance issues in real-time, alerting the customer automatically when something goes wrong.
 **2- Adaptive Messaging via Einstein Bot:**
@@ -53,6 +55,8 @@ When a workorder is generated, the system automatically sends an email to the cu
 
 
 **Key Technologies Used:**
+
+
     - Agentforce: For managing agent interactions and automating case and workorder creation.
     - Einstein Bot & Adaptive Messaging: For managing customer queries and product selection, even though Adaptive Messaging is still in beta.
     - Data Cloud (with RAG): To retrieve warranty details from unstructured data sources.
