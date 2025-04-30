@@ -65,4 +65,4 @@ When a workorder is generated, the system automatically sends an email to the cu
     - Einstein Knowledge Base: To provide troubleshooting steps based on customer issues.
 
 
-![ Alt Text](https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=)
+![ Alt Text](https://drive.google.com/file/d/1d-YPm10dyM68S0lIOEY7j4bRkPIbsOT8/view?usp=sharing)
