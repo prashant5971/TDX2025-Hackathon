@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic handles the creation of quotes for customers. It includes gathering necessary information and generating a quote based on user inputs.</description>
+    <developerName>Quote_Creation</developerName>
+    <genAiFunctions>
+        <functionName>Create_Quote</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Ask the customer for all necessary details to create a quote, such as product specifications and quantities.</description>
+        <developerName>instruction_askthecust0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_askthecust0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer is unsure about the details, ask clarifying questions to gather accurate information.</description>
+        <developerName>instruction_ifthecusto1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecusto1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Offer to escalate to a human agent if the customer requires further assistance or has complex requirements.</description>
+        <developerName>instruction_offertoesc2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_offertoesc2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide the customer with the generated quote and confirm if any adjustments are needed.</description>
+        <developerName>instruction_providethe3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_providethe3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Quote Creation</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist customers in generating quotes by gathering required information and providing the quote details.</scope>
+</GenAiPlugin>

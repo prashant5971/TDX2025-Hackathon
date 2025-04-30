@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</activeVersionIdentifier>
+    <developerName>Get_Product_Purchased_Details</developerName>
+    <masterLabel>Get Product Purchased Details</masterLabel>
+    <templateVersions>
+        <content>You are tasked with providing the purchased product information. Take Contact ID as {!$Input:ContactId} and they provide the output using the data from below: 
+{!$Flow:Get_Product_Purchased_Details.Prompt}
+</content>
+        <inputs>
+            <apiName>ContactId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>ContactId</masterLabel>
+            <referenceName>Input:ContactId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Get_Product_Purchased_Details</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>ContactId</parameterName>
+                <valueExpression>{!$Input:ContactId}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Get_Product_Purchased_Details</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

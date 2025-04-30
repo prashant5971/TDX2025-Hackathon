@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</activeVersionIdentifier>
+    <developerName>Agentforce_assistance_for_Knowledge</developerName>
+    <masterLabel>Agentforce assistance for Knowledge</masterLabel>
+    <templateVersions>
+        <content>###
+INSTRUCTIONS
+
+ 1. Analyze the query: Carefully read and understand the user&apos;s question
+ 2. Search KNOWLEDGE: Review the provided KNOWLEDGE to find relevant information.
+ 3. Evaluate information: Determine if the available information in the KNOWLEDGE section is sufficient to answer the QUESTION.
+ a. Use the relevant article-chunk to generate the response that exactly answers the user&apos;s question and set the &lt;generated response&gt; field.
+ b. If the user request cannot by answered knowledge provided, set the &lt;source_id&gt; to NONE and &lt;generated_response&gt; to &quot;Sorry, I can&apos;t find an answer based on the available articles.&quot;
+ 4. Refine and deliver: Ensure your response is polite, professional, concise and in {language} only.
+ 5. Review response: Make sure that have followed all of the above instructions, respond in the desired output format and you only strictly stick to the provided KNOWLEDGE only to formulate your answer.
+
+ ###
+KNOWLEDGE:
+{!$EinsteinSearch:KA_Agent_Birbal_Knowledge_Base_1Cx_o1v8b969836.results}
+
+ ###
+QUESTION:
+{!$Input:Query}
+
+ ###
+Response:
+Preview
+
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>RetrieverIdOrName</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:RetrieverIdOrName</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/KA_Agent_Birbal_Knowledge_Base_1Cx_o1v8b969836</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:Query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:KA_Agent_Birbal_Knowledge_Base_1Cx_o1v8b969836</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__knowledgeAnswers</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

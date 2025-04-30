@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Assist users in troubleshooting their issues by providing methods and solutions from knowledge articles.</description>
+    <developerName>Troubleshooting_Assistance</developerName>
+    <genAiFunctions>
+        <functionName>Agentforce_assistance_for_Knowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a user describes a problem, search the relevant knowledge articles for solutions.</description>
+        <developerName>instruction_ifauserdes0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifauserdes0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If user are satisfied with the solution, then ask to confirm if we can proceed to close the case?</description>
+        <developerName>instruction_ifuserares1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifuserares1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If user is not satisfied with solution, then ask the user Would you like to create a case to address the issue further?</description>
+        <developerName>instruction_ifuserisno2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifuserisno2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide step-by-step troubleshooting methods based on the information found in the knowledge articles.</description>
+        <developerName>instruction_provideste3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_provideste3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask clarifying questions to better understand the user’s issue if necessary.</description>
+        <developerName>instruction_askclarify4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_askclarify4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Troubleshooting Assistance</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to assist users in troubleshooting their issues by providing relevant methods and solutions from knowledge articles. Do not attempt to address unrelated issues.</scope>
+</GenAiPlugin>

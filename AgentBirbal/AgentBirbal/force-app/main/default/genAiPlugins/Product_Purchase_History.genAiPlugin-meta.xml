@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Displays the product purchase information for an experience cloud user contact. This topic is triggered by user inquiries related to their purchased products.</description>
+    <developerName>Product_Purchase_History</developerName>
+    <genAiFunctions>
+        <functionName>FlowGetProdOps</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If there are any discrepancies in the purchase history, escalate the issue to a human agent.</description>
+        <developerName>instruction_ifthereare0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthereare0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>only provide product purchased details once in conversion</description>
+        <developerName>instruction_onlyprovid1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onlyprovid1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Present the purchase history in a clear and concise manner.</description>
+        <developerName>instruction_presentthe2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_presentthe2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Retrieve the Product Purchased information for the Contact of the Experience Cloud user taking input from the Messaging Session object record.</description>
+        <developerName>instruction_retrieveth3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_retrieveth3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When the customer selects the product, update the Messaging Session with the Product Name</description>
+        <developerName>instruction_whenthecus4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenthecus4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Product Purchase History</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to show the product purchase for the experience cloud user contact. Do not handle other inquiries or perform actions outside this scope.</scope>
+</GenAiPlugin>

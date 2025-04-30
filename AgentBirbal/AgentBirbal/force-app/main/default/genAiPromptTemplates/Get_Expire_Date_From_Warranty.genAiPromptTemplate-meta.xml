@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</activeVersionIdentifier>
+    <developerName>Get_Expire_Date_From_Warranty</developerName>
+    <masterLabel>Get Expire Date From Warranty</masterLabel>
+    <templateVersions>
+        <content>Use this {!$Input:query} and return only Warranty Expire Date value from {!$EinsteinSearch:Default_CustomerWarrantyDMO_Retriever_1Cx_o1ve19f0772.results}.
+Do not return any other text than the date. format date in salesforce supporting date format
+</content>
+        <inputs>
+            <apiName>query</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:query</referenceName>
+            <required>true</required>
+        </inputs>
+        <inputs>
+            <apiName>chunks</apiName>
+            <definition>primitive://String</definition>
+            <referenceName>Input:chunks</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getEinsteinRetrieverResults/Default_CustomerWarrantyDMO_Retriever_1Cx_o1ve19f0772</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>searchText</parameterName>
+                <valueExpression>{!$Input:query}</valueExpression>
+            </parameters>
+            <referenceName>EinsteinSearch:Default_CustomerWarrantyDMO_Retriever_1Cx_o1ve19f0772</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__searchAnswersType</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

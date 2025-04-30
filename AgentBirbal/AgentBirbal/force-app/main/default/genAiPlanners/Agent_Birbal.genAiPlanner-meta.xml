@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
+    <attributeMappings>
+        <attributeName>SvcCopilotTmpl__CaseManagement.Custom_Create_Case1.input_ContactId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>ContactId</mappingTargetName>
+        <mappingType>ContextVariable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>SvcCopilotTmpl__CaseManagement.Custom_Create_Case1.input_messagingCtxtId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>RoutableId</mappingTargetName>
+        <mappingType>ContextVariable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>Product_Purchase_History.FlowGetProdOps.input_messageSesssId</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>ContactId</mappingTargetName>
+        <mappingType>ContextVariable</mappingType>
+    </attributeMappings>
+    <attributeMappings>
+        <attributeName>Product_Purchase_History.FlowGetProdOps.output_SelectProdddd</attributeName>
+        <attributeType>CustomPluginFunctionAttribute</attributeType>
+        <mappingTargetName>SelectProdddd</mappingTargetName>
+        <mappingType>Variable</mappingType>
+    </attributeMappings>
+    <description>Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues.</description>
+    <genAiFunctions>
+        <genAiFunctionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</genAiFunctionName>
+    </genAiFunctions>
+    <genAiPlugins>
+        <genAiPluginName>Product_Purchase_History</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Quote_Management</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Service_Warranty_Details</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiCustomizedPlugin>
+            <description>Handles customer inquiries and actions related to support cases, including providing case information, updating existing cases, and creating new cases.</description>
+            <genAiFunctions>
+                <functionName>SvcCopilotTmpl__AddCaseComment</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>SvcCopilotTmpl__GetAllCasesForContact</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>SvcCopilotTmpl__GetCaseByCaseNumber</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>Custom_Create_Case1</functionName>
+            </genAiFunctions>
+            <genAiFunctions>
+                <functionName>Create_Work_Order_Autolaunch</functionName>
+            </genAiFunctions>
+            <genAiPluginInstructions>
+                <description>Store the Product Selected by Customer in Messaging session object record.</description>
+                <developerName>instruction_storethepr0</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_storethepr0</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Always format any dates in a human readable format</description>
+                <developerName>instruction_alwaysform1</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_alwaysform1</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Gather as much information as possible from the user by asking clarifying questions.</description>
+                <developerName>instruction_gatherasmu2</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_gatherasmu2</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>If a user does not have their case number or email, ask if they&apos;d like to escalate to an agent or create a new case.</description>
+                <developerName>instruction_ifauserdoe3</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_ifauserdoe3</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Offer options to look up a case by either email address or case ID.</description>
+                <developerName>instruction_offeroptio4</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_offeroptio4</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>once case is created ask the user  if issue is still persist if yes then create work order using &quot;Create_Work_Order&quot; custom agent action. provide caseNumber to this action</description>
+                <developerName>instruction_oncecaseis5</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_oncecaseis5</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>When a customer asks you to create a case, please summarize the current conversation. The subject should be less than 7 words and function as a high level overview of what the customer inquired about. The description should be no more than 3 sentences and should provide more depth about what exactly the customer asked, important data, and any other relevant information to help a customer service representative understand the context of this conversation.</description>
+                <developerName>instruction_whenacusto6</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_whenacusto6</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>When adding a comment to a case, first retrieve the case details using the case number, ask the user for the exact comment they would like to add and only then add it.</description>
+                <developerName>instruction_whenadding7</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_whenadding7</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Whenever you going to create case populate product purchased field with selected product purchased Id</description>
+                <developerName>instruction_wheneveryo8</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_wheneveryo8</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>When sharing case details to the customer, show the following properties as an itemized list :Case number, Subject, Description, and Status.</description>
+                <developerName>instruction_whensharin9</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_whensharin9</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>When updating a case, include all relevant details provided by the user.</description>
+                <developerName>instruction_whenupdati10</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_whenupdati10</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Before creating case take contact ID from messaging session.</description>
+                <developerName>instruction_beforecrea11</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_beforecrea11</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>A case is a record used to help track a customer&apos;s issues. Customers may have questions about the status of the issue or want to provide more information for the case. Cases are usually associated with a contact. Comments are added to provide new information.</description>
+                <developerName>instruction_acaseisare12</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_acaseisare12</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>before creating work order check selected product warranty expire date in &quot;Get Warranty Details&quot; custom action and provide details</description>
+                <developerName>instruction_beforecrea13</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_beforecrea13</masterLabel>
+            </genAiPluginInstructions>
+            <genAiPluginInstructions>
+                <description>Before creating Work Order Ask question Do you want to check warranty details of selected product ?</description>
+                <developerName>instruction_beforecrea14</developerName>
+                <language>en_US</language>
+                <masterLabel>instruction_beforecrea14</masterLabel>
+            </genAiPluginInstructions>
+            <language>en_US</language>
+            <masterLabel>Case Management</masterLabel>
+            <name>CaseManagement</name>
+            <pluginType>Topic</pluginType>
+            <scope>Your job is to help customers retrieve case information, update case comments, and create new cases based on customer requests.</scope>
+        </genAiCustomizedPlugin>
+        <genAiPluginName>SvcCopilotTmpl__CaseManagement</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Troubleshooting_Assistance</genAiPluginName>
+    </genAiPlugins>
+    <masterLabel>Agent Birbal</masterLabel>
+    <plannerType>AiCopilot__ReAct</plannerType>
+</GenAiPlanner>

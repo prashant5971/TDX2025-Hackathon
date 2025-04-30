@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Handles inquiries related to managing and generating quotes for products or services.</description>
+    <developerName>Quote_Management</developerName>
+    <genAiFunctions>
+        <functionName>RouteTpoQuote</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a user requests a new quote, gather all necessary details such as product specifications and quantity.</description>
+        <developerName>instruction_ifauserreq0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifauserreq0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user does not have the quote ID, ask for other identifying details such as the date or product name.</description>
+        <developerName>instruction_iftheuserd1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_iftheuserd1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Offer to email the quote to the user if they provide an email address.</description>
+        <developerName>instruction_offertoema2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_offertoema2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Provide options to save or discard changes to a quote after modifications.</description>
+        <developerName>instruction_provideopt3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_provideopt3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When modifying an existing quote, confirm the quote ID and the changes required.</description>
+        <developerName>instruction_whenmodify4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenmodify4</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Quote Management</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to assist users in creating, modifying, and retrieving quotes for products or services. Do not handle order placements or account issues.</scope>
+</GenAiPlugin>

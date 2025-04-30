@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>When user ask for warranty details check experience cloud user/contact name and match that with customer name in warranty card details.</description>
+    <developerName>Service_Warranty_Details</developerName>
+    <genAiFunctions>
+        <functionName>Get_Warranty_Details</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Clearly communicate the warranty details to the customer, including coverage period and any terms and conditions.</description>
+        <developerName>instruction_clearlycom0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_clearlycom0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the warranty details cannot be found, offer to escalate the issue to a human agent for further assistance.</description>
+        <developerName>instruction_ifthewarra1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthewarra1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Search the warranty details in &quot;Get Warranty Details&quot; custom agent action.</description>
+        <developerName>instruction_searchthew2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_searchthew2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Verify the customer&apos;s name before providing warranty details. experience cloud user/contact name is the name of Customer in warranty card</description>
+        <developerName>instruction_verifythec3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_verifythec3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Service Warranty Details</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>You are responsible for providing service warranty details to customers using their name . Do not handle any other types of inquiries or requests.</scope>
+</GenAiPlugin>

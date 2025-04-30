@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</activeVersionIdentifier>
+    <developerName>Create_Work_Order</developerName>
+    <masterLabel>Create Work Order</masterLabel>
+    <templateVersions>
+        <content>Use input as {!$Input:CaseNumber} and create work order using data below:
+{!$Flow:Create_Work_Order.Prompt}
+</content>
+        <inputs>
+            <apiName>CaseNumber</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>CaseNumber</masterLabel>
+            <referenceName>Input:CaseNumber</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://Create_Work_Order</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>CaseNumber</parameterName>
+                <valueExpression>{!$Input:CaseNumber}</valueExpression>
+            </parameters>
+            <referenceName>Flow:Create_Work_Order</referenceName>
+        </templateDataProviders>
+        <versionIdentifier>K3LrCD1r74xS+uZga3l79EvVLv7VfoeMqOnxPUcEwqc=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
