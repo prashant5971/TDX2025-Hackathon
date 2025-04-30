@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>ESW_Appliances_Services_1745924664497</label>
+    <site>
+        <urlPathPrefix>ESWAppliancesServices1745924664497</urlPathPrefix>
+    </site>
+    <space>site/ESW_Appliances_Services_17459246644971</space>
+</DigitalExperienceConfig>
