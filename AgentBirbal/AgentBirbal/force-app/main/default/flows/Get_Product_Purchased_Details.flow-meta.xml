@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Product_Purchased_Instruction</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Product Purchased Instruction</label>
+        <locationX>264</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Product ID : {!Loop_each_Product_Purchased.Name}
+Product Name : {!Loop_each_Product_Purchased.Product_Name__c}
+above are all products which you have purchased. In which product you are having issue?
+</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_each_Product_Purchased</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Second_Product_Purchased_Instruction</name>
+        <elementSubtype>AddPromptInstructions</elementSubtype>
+        <label>Second Product Purchased Instruction</label>
+        <locationX>176</locationX>
+        <locationY>542</locationY>
+        <assignmentItems>
+            <assignToReference>$Output.Prompt</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>Ask for specific issue then provide basic troubleshoot related information from knowledge articles
+</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>This flow will return product purchased details</description>
+    <environments>Default</environments>
+    <interviewLabel>Get Product Purchased Details {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Product Purchased Details</label>
+    <loops>
+        <name>Loop_each_Product_Purchased</name>
+        <label>Loop each Product Purchased</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <collectionReference>Get_Product_Purchased_Details</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Product_Purchased_Instruction</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Second_Product_Purchased_Instruction</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>PromptFlow</processType>
+    <recordLookups>
+        <name>Get_Product_Purchased_Details</name>
+        <label>Get Product Purchased Details</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_each_Product_Purchased</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ContactId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Products_Purchased__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Product_Purchased_Details</targetReference>
+        </connector>
+        <triggerType>Capability</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
