@@ -1,0 +1,35 @@
+{
+  "required" : [ "ContactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "ContactId" : {
+      "title" : "ContactId",
+      "description" : "Messaging Session Contact Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "caseDescription" : {
+      "title" : "caseDescription",
+      "description" : "Stores the details of the user issue to be used for the case.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "caseSubject" : {
+      "title" : "caseSubject",
+      "description" : "Stores the subject of the case to create.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "messagingCtxtId" : {
+      "title" : "messagingCtxtId",
+      "description" : "Messaging Session Id.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

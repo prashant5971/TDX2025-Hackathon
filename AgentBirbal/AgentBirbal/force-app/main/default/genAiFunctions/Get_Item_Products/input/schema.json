@@ -1,0 +1,14 @@
+{
+  "required" : [ "messSessConId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "messSessConId" : {
+      "title" : "MessagingSessContId",
+      "description" : "Salesforce Messaging Session Contact Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

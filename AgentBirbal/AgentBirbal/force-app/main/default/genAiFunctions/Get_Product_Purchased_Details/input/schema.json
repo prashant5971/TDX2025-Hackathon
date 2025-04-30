@@ -1,0 +1,21 @@
+{
+  "required" : [ "Input:ContactId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:ContactId" : {
+      "title" : "ContactId",
+      "description" : "Salesforce record id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

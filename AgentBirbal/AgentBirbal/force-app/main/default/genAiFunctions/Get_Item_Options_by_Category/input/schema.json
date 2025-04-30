@@ -1,0 +1,14 @@
+{
+  "required" : [ "categoryName" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "categoryName" : {
+      "title" : "Category Name",
+      "description" : "Category name is text input fetch by apex class",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

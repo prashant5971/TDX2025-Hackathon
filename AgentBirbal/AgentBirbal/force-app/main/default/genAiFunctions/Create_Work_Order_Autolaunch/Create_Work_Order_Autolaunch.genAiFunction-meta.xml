@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Let agent create a work order but check warranty expire details of selected product</description>
+    <invocationTarget>Create_Work_Order_Autolaunch</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Create Work Order Autolaunch</masterLabel>
+    <progressIndicatorMessage>Creating WO</progressIndicatorMessage>
+</GenAiFunction>

@@ -1,0 +1,28 @@
+{
+  "required" : [ "Input:RetrieverIdOrName", "Input:Query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:RetrieverIdOrName" : {
+      "title" : "RetrieverIdOrName",
+      "description" : "Answer the user question by using knowledge article related troubleshooting",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Input:Query" : {
+      "title" : "Query",
+      "description" : "Answer the user question by using knowledge article related troubleshooting",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "citationMode" : {
+      "title" : "Citation Mode",
+      "description" : "Select Citation Mode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

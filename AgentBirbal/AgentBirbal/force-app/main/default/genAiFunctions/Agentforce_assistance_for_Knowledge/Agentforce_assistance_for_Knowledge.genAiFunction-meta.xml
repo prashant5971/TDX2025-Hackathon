@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Answer the user question by using knowledge article related troubleshooting</description>
+    <invocationTarget>Agentforce_assistance_for_Knowledge</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Agentforce assistance for Knowledge</masterLabel>
+    <progressIndicatorMessage>Loading...</progressIndicatorMessage>
+</GenAiFunction>

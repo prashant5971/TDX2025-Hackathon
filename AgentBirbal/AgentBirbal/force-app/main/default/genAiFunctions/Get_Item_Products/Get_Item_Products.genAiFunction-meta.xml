@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Returns a list of item options based on the product purchased choices</description>
+    <invocationTarget>ItemOptionService</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <mappingAttributes>
+        <label>messSessConId</label>
+        <name>input_messSessConId</name>
+        <parameterName>messSessConId</parameterName>
+        <parameterType>input</parameterType>
+    </mappingAttributes>
+    <masterLabel>Get Item Products</masterLabel>
+</GenAiFunction>
